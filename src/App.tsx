@@ -1,7 +1,8 @@
-import { Button, Container, Typography } from "@mui/material";
+import { Button, Container, Divider, Typography } from "@mui/material";
 import { useState } from "react";
-import AppForm from "./components/AppForm";
 import { AppWrapper } from "./components/AppWrapper";
+import FibonacciNumber from "./components/FibonacciNumber/FibonacciNumber";
+import SumOfNumbers from "./components/SumOfNumbers/SumOfNumbers";
 
 const yellowColor = "#FFEA20";
 const blueColor = "#8DCBE6";
@@ -24,8 +25,12 @@ function App() {
         >
           Change background
         </Button>
-        <Typography component="h2">Calculate Fibonacci Number</Typography>
-        <AppForm />
+
+        <FibonacciNumber />
+
+        <Divider sx={{ mt: 3, mb: 3 }} />
+
+        <SumOfNumbers />
       </Container>
     </AppWrapper>
   );
