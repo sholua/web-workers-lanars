@@ -1,1 +1,1 @@
-export * from "./get-nth-fibonacci-number";
+export { getNthFobonacciNumber } from "./get-nth-fibonacci-number";

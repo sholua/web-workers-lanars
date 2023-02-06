@@ -1,14 +1,12 @@
-import React, { useState } from "react";
-import { useWebWorker } from "./hooks";
+import { Container, Typography } from "@mui/material";
+import AppForm from "./components/AppForm";
 
 function App() {
-  const [value, setValue] = useState(null);
-  const { result, error, run } = useWebWorker((k: number) => k + 1);
-
   return (
-    <div className="App">
-      
-    </div>
+    <Container>
+      <Typography component="h2">Calculate Fibonacci Number</Typography>
+      <AppForm />
+    </Container>
   );
 }
 
