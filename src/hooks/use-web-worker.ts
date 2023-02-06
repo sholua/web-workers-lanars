@@ -11,6 +11,7 @@ export const useWebWorker = (fn: (a: any) => any) => {
   const [error, setError] = useState("");
 
   const run = (value: number) => {
+    setResult(null);
     const worker = new Worker(
       URL.createObjectURL(new Blob([`(${workerHandler})(${fn})`]))
     );

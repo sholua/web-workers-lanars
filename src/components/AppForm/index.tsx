@@ -1,11 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import {
-  Alert,
-  Box,
-  Button,
-  ButtonGroup,
-  TextField,
-} from "@mui/material";
+import { Alert, Box, Button, ButtonGroup, TextField } from "@mui/material";
 import { getNthFobonacciNumber } from "../../helpers";
 import { useWebWorker } from "../../hooks";
 import { FormWrapper } from "./styles";
@@ -24,6 +18,7 @@ function AppForm() {
   };
 
   const calculateNthFibNumberWithoutWorker = () => {
+    setFibNumber(null);
     setFibNumber(getNthFobonacciNumber(+value));
   };
 
